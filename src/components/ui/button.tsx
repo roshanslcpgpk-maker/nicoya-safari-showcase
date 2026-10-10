@@ -9,6 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        brass: "bg-brass text-forest hover:bg-brass/90 rounded-sm",
+        glass: "border border-on-image/50 bg-transparent text-on-image hover:bg-on-image/10 rounded-sm",
+        editorial: "bg-transparent text-primary border-b border-primary rounded-none hover:text-muted-foreground px-0 shadow-none",
+        navigation: "bg-transparent text-inherit hover:opacity-70 rounded-sm",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
