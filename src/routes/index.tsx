@@ -52,11 +52,11 @@ function Index() {
    <header className="header site-width">
     <Wordmark />
     <nav className="desktop-nav" aria-label="Main navigation">{navItems.map(item => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}<ConceptBadge /><Button asChild variant="glass" className="nav-enquire"><a href="#contact">Plan your stay <ArrowUpRight /></a></Button></nav>
-    <Button variant="navigation" size="icon" className="mobile-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="mobile-navigation">{menuOpen ? <X /> : <Menu />}</Button>
+    <div className="mobile-header-tools"><ConceptBadge /><Button variant="navigation" size="icon" className="mobile-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="mobile-navigation">{menuOpen ? <X /> : <Menu />}</Button></div>
     {menuOpen && <nav className="mobile-menu" id="mobile-navigation" aria-label="Mobile navigation">{[...navItems, {label:"Plan your stay", id:"contact"}].map(item => <a key={item.id} href={`#${item.id}`} onClick={() => setMenuOpen(false)}>{item.label}</a>)}<ConceptBadge /></nav>}
    </header>
    <div className="hero-content site-width">
-    <p className="eyebrow">Habarana, Sri Lanka · A stay close to nature</p>
+    <p className="eyebrow">Nicoya Safari Resort · Habarana, Sri Lanka</p>
     <h1>Your Habarana<br />Escape, <em>Close<br />to the Wild</em></h1>
     <p className="hero-sub">Slow mornings. Wild encounters. A quieter corner of Sri Lanka to call your own.</p>
     <div className="hero-actions"><WhatsAppLink hero /><Button variant="glass" asChild><a href="#stay">Explore the Stay <ArrowDown /></a></Button></div>
