@@ -117,3 +117,8 @@
  .location-section { padding-block:0 64px; } .location-grid { gap:30px; } .faq-list summary { font-size:12px; } .contact-copy .contact-phone { margin-top:24px; } .contact-grid { gap:40px; } .enquiry-form { gap:18px 12px; } .form-bottom { align-items:start; } .form-bottom p { max-width:155px; } .form-bottom button { padding-inline:14px; } .footer { padding-top:40px; } .footer-top { flex-direction:column; padding-bottom:32px; } .footer-links { gap:24px; flex-wrap:wrap; } .footer-bottom { flex-direction:column; gap:12px; font-size:8px; } .footer-tagline { font-size:22px; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
+
+/* Hero layout fix: stop the bottom text from overlapping the buttons */
+.hero { display: flex; flex-direction: column; height: auto; min-height: 720px; }
+.hero-content { flex: 1 0 auto; padding-bottom: 32px; }
+.hero-bottom { position: relative; bottom: auto; left: auto; right: auto; margin-top: auto; padding-bottom: 28px; }
